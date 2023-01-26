@@ -27,7 +27,7 @@ export default labyrinth
 export const generateLabyrinth = () => {
   return (dispatch, getState) => {
     dispatch(loader.actions.setLoading(true))
-    fetch('https://labyrinth-technigo.herokuapp.com/start', {
+    fetch('https://labyrinth.technigo.io/start', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -45,7 +45,7 @@ export const generateLabyrinth = () => {
 export const generateQuestion = (direction) => {
   return (dispatch, getState) => {
     dispatch(loader.actions.setLoading(true))
-    fetch('https://labyrinth-technigo.herokuapp.com/action', {
+    fetch('https://labyrinth.technigo.io/action', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
